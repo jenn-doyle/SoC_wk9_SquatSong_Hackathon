@@ -25,7 +25,7 @@ public class SongRepository : BaseRepository, IRepository<MoQuotePlusSong>
     //  Create code for time buckets (1 = 0-60 secs)(2 =61-90 )(3 =91-120 )(4 =121-150 )(5=151-180)(6=181-210)(7=211-240)(8=241-270)
     //  Select Code Plus Random 
 
-    public async Task<MoQuotePlusSong> Insert(string Title, string Artist, int SongLengthCode, string Link, string SuggestedBy)
+    public async Task<MoQuotePlusSong> Insert(MoQuotePlusSong songObject)
     // (string Title, string Artist, int SongLengthCode, string Link, string SuggestedBy)
     {
         using var connection = CreateConnection();
