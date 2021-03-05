@@ -9,6 +9,10 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    
+}
+* {
+  background-color: #e4fbff;
 }
 /*mobile*/
 @media (max-width: 500px){
@@ -25,24 +29,29 @@
 h1{
   grid-area: header;
   font-weight: 600;
-  font-style: italic;
+  font-family: "Architects Daughter";
+  font-size: 50px;
 }
 h1 span{
-  color: #1db954;
+  color: #7868e6;
   font-weight: 700;
   font-style: normal;
 }
 .squat-input-form{
   grid-area: squatInput;
+  font-family: "Architects Daughter";
 }
 .quote-display{
   
   grid-area: quoteDisplay;
+  font-family: "Architects Daughter";
 }
 .song-list{
   grid-area: list;
+  font-family: "Architects Daughter";
 }
 .add-song-form{
   grid-area: footerForm;
+  font-family: "Architects Daughter";
 }
 
