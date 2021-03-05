@@ -1,31 +1,15 @@
 import './SongList.css';
 
-//example data!!!
-const initialData = [
-	{
-		title    : 'bob',
-		artist   : 'bob',
-		duration : 'bob',
-		link     : 'bob',
-		yourName : 'bob',
-	},
-];
 
 //takes in data object
-function SongList() {
+function SongList({data}) {
 	return (
-		<ul className='song-list'>
-			{initialData.map((item) => (
-				<li className='song-list-item'>
-					<span className='title-artist'>
-						{item.title} - {item.artist}
-					</span>
-					<span className='duration'>{item.duration}</span>
-					<span className='link'>{item.link}</span>
-					<span className='recommended-by'>Recommended by:{item.yourName}</span>
-				</li>
-			))}
-		</ul>
+		<div className='song-list'>
+			<h3>{data.title}</h3>
+			<h4>{data.artist}</h4>
+			<p>Link:<a href="{data.link}">{data.link}</a></p>
+			<p>Suggested by: {data.suggestedBy}</p>
+		</div>
 	);
 }
 

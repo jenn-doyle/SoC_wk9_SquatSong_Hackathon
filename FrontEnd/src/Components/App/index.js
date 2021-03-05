@@ -21,7 +21,7 @@ function App() {
       <SquatInput className="squat-input-com" onClick={setDataState} />
       <QuoteDisplay className="quote-display-com" />
 
-      <SongList className="list-com" />
+      <SongList className="list-com" data ={appData} />
 
       <AddSongInput className="add-song-com" />
     </div>
