@@ -44,7 +44,7 @@ function AddSongInput() {
         onClick={(event) => {
           event.preventDefault();
           console.log(data);
-          console.alert("thanks for your submission");
+          // console.alert("thanks for your submission");
         }}
       >
         Add Song

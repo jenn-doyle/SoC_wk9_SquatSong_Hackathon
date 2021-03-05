@@ -12,14 +12,17 @@ function App() {
 
   const appData = useFetch(dataState);
   console.log(appData);
-
+  // if (appData === null){ 
+  //   return <p>Loading...</p>
   return (
     <div className="App">
       <h1>
         <span>SSSG</span> (Super-Squat Song Generator)
       </h1>
+      <h2>Enter How Many Squats You Gotta Do... </h2>
+      <p></p>
       <SquatInput className="squat-input-com" onClick={setDataState} />
-      <QuoteDisplay className="quote-display-com" />
+      <QuoteDisplay className="quote-display-com" data = {appData}/>
 
       <SongList className="list-com" data ={appData} />
 

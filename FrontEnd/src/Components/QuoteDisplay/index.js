@@ -1,11 +1,11 @@
 import "./QuoteDisplay.css";
 
-function QuoteDisplay({ quote, person }) {
+function QuoteDisplay({ data}) {
   // take in data from fetch
   return (
     <div className="quote-display">
-      <h2>{quote}</h2>
-      <h3>{person}</h3>
+      <h2>{data.quote}</h2>
+      <h3>{data.artist}</h3>
     </div>
   );
 }

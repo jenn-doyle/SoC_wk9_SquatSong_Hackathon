@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function useFetch(songLengthState) {
-  const [dataState, setDataState] = useState({});
+  const [dataState, setDataState] = useState(1);
 
   const BACKEND_URL = "https:localhost:5001/songs";
   const PATH = songLengthState;
