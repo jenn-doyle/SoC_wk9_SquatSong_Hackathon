@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button, input {
+button,
+input {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -17,11 +18,12 @@ button {
   background-color: #1db954;
   color: white;
   border-radius: 60px;
-  padding: 20px, 30px;
+  padding: 10px 40px;
   border: none;
   outline: none;
   box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.75);
-  transition: .25s all;
+  transition: 0.25s all;
+  margin: 10px;
 }
 button:hover,
 button:focus {
