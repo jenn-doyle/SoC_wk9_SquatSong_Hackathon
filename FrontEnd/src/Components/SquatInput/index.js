@@ -4,7 +4,7 @@ import "./SquatInput.css";
 //takes in function to send squats back up to app.
 function SquatInput({ onClick }) {
   const [input, setInput] = useState(5);
-
+  //let difficulty = 3;
   return (
     <form className="squat-input-form">
       <input
@@ -19,6 +19,8 @@ function SquatInput({ onClick }) {
         type="submit"
         onClick={(e) => {
           e.preventDefault();
+          //calc in here???
+          
           //send data up
           onClick(input);
         }}
