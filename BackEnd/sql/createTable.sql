@@ -25,13 +25,13 @@ VALUES
     ('Elizabeth My Dear','Stone Roses',1,'https://www.youtube.com/watch?v=t7Xi1Jt9lXM','JenBamin'),
     ('Lazing on a Sunday Afternoon','Queen',2,'https://www.youtube.com/watch?v=OU6EyXcFBxA','Liam Morley'),
     ('Three Girl Rhumba','Wire',2,'https://www.youtube.com/watch?v=ctpzzTR15yo','Nathan Hinks'),
-     ('','',3,'',''),
-    ('','',3,'',''),
-       ('','',4,'',''),
-    ('','',4,'',''),
-       ('','',5,'',''),
-    ('','',5,'',''),
-       ('','',6,'','');
+     ('Fell In Love With A Girl','The White Stripes',3,'https://www.youtube.com/watch?v=1CK7v9VUBvs','Stella Ellie'),
+    ('Norgaard','The Vaccines',3,'https://www.youtube.com/watch?v=8VI3q4T-1Jc','Dom Robinson'),
+       ('Runaway Baby','Bruno Mars',4,'https://www.youtube.com/watch?v=CbE_fVjHdCY','James Greygoose'),
+    ('Respect','Aretha Franklin',4,'https://www.youtube.com/watch?v=6FOUqQt3Kg0','Ilker Peker'),
+       ('The Middle','Jimmy Eat World',5,'https://www.youtube.com/watch?v=oKsxPW6i3pM','Jimmy'),
+    ('All The Small Things','Blink 182',5,'https://www.youtube.com/watch?v=9Ht5RZpzPqw','Stan Smith'),
+       ('Bootylicious','Destinys Child',6,'https://www.youtube.com/watch?v=IyYnnUcgeMc','Craig Farrell');
 
     
 

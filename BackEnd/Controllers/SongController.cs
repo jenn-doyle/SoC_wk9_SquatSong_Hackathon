@@ -9,44 +9,45 @@ using System.Numerics;
 [Route("songs")]
 public class SongController : ControllerBase
 {
-    private readonly IRepository<Song> _songRepository;
+    private readonly IRepository<MoQuotePlusSong> _songRepository;
 
-    public SongController(IRepository<Song> songRepository)
+    public SongController(IRepository<MoQuotePlusSong> songRepository)
     {
         _songRepository = songRepository;
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> Get(long id)
+    [HttpGet("{slc}")]
+    public async Task<IActionResult> Get(int slc)
     {
         try
         {
-            var song = await _songRepository.Get(id);
+            var song = await _songRepository.Get(slc);
             return Ok(song);
         }
         catch (Exception)
         {
             //handle exception
-            return NotFound($"no song with id {id}");
+            return NotFound();
         }
     }
 
 
     [HttpPost]
-    public async Task<IActionResult> Insert([FromBody] Song song)
+    public async Task<IActionResult> Insert([FromBody] MoQuotePlusSong song)
     {
         try
         {
             Console.WriteLine(ModelState.IsValid);
-            var insertSong = await _songRepository.Insert(song);
+            var insertSong = await _songRepository.Insert(new MoQuotePlusSong {Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy});
             return Ok(insertSong);
+
         }
         catch (Exception error)
         {
             Console.WriteLine(error.Message);
             Console.WriteLine(error.StackTrace);
             //handle exception
-            return BadRequest("Your song is longer than 6 characters dumbass");
+            return BadRequest();
         }
     }
 
