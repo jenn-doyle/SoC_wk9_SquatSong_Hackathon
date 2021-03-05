@@ -4,10 +4,14 @@ import QuoteDisplay from "../QuoteDisplay";
 import SongList from "../SongList";
 import SquatInput from "../SquatInput";
 import "./App.css";
+import useFetch from "../../hooks/useFetch";
 
 function App() {
   const [dataState, setDataState] = useState(0);
   // fetch songs here using our custom hook - useFetch
+
+  const appData = useFetch(dataState);
+  console.log(appData);
 
   return (
     <div className="App">

@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
-function useFetch(state) {
-  const [dataState, setDataState] = useState([]);
+function useFetch(songLengthState) {
+  const [dataState, setDataState] = useState({});
+
+  const BACKEND_URL = "https:localhost:5001/songs";
+  const PATH = songLengthState;
 
   async function fetchData() {
-    let result = await fetch("https:localhost:5001/songs");
+    let result = await fetch(`${BACKEND_URL}/${PATH}`);
     let data = await result.json();
     setDataState(data);
   }
   useEffect(() => {
     fetchData();
-  }, [state]);
+  }, [songLengthState]);
 
   return dataState;
 }

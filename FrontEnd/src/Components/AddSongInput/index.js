@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./AddSongInput.css";
+import usePost from "../../hooks/usePost";
 
 const initialData = {
   Title: "bob",
   Artist: "bob",
-  Duration: "bob",
+  SongLengthCode: "bob",
   link: "bob",
-  yourName: "bob",
+  SuggestedBy: "bob",
 };
 
 function AddSongInput() {
@@ -20,6 +21,7 @@ function AddSongInput() {
   }
 
   // post songs from here using usePost custom hooks.
+  usePost(data);
 
   return (
     <form className="add-song-form" action="submit">
@@ -27,13 +29,13 @@ function AddSongInput() {
       <input type="text" placeholder="Artist" onChange={(e) => UpdateData(e)} />
       <input
         type="text"
-        placeholder="Duration"
+        placeholder="SongLengthCode"
         onChange={(e) => UpdateData(e)}
       />
       <input type="text" placeholder="Link" onChange={(e) => UpdateData(e)} />
       <input
         type="text"
-        placeholder="your name"
+        placeholder="SuggestedBy"
         onChange={(e) => UpdateData(e)}
       />
 
