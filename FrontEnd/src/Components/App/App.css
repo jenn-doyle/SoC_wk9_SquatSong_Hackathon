@@ -1,23 +1,48 @@
 .App{
   display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
   grid-template-areas: 
-    "header header" 
-    "squat-input list"
-    "quote-display list"
-    "footer-form footer-form";
+    "header header header header" 
+    ". squatInput list ."
+    ". quoteDisplay list . "
+    "footerForm footerForm footerForm footerForm";
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+/*mobile*/
+@media (max-width: 500px){
+   .App {
+     grid-template-areas: 
+    "header header header" 
+    ". squatInput."
+    ". quoteDisplay ."
+    ". list ."
+    "footerForm footerForm footerForm";
+   }
+}
+
 h1{
   grid-area: header;
+  font-weight: 600;
+  font-style: italic;
 }
-.squat-input{
-  grid-area: squat-input;
+h1 span{
+  color: #1db954;
+  font-weight: 700;
+  font-style: normal;
+}
+.squat-input-form{
+  grid-area: squatInput;
 }
 .quote-display{
-  grid-area: quote-display;
+  
+  grid-area: quoteDisplay;
 }
-.list{
+.song-list{
   grid-area: list;
 }
-.footer-form{
-  grid-area: footer-form;
+.add-song-form{
+  grid-area: footerForm;
 }
+

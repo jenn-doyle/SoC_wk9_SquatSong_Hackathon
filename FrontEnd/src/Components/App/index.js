@@ -8,14 +8,14 @@ function App() {
 	return (
 		<div className='App'>
 			<h1>
-				<span>SSSG</span> (Super Squat Song Generator)
+				<span>SSSG</span> (Super-Squat Song Generator)
 			</h1>
-			<SquatInput className='squat-input' />
-			<QuoteDisplay className='quote-display' />
+			<SquatInput className='squat-input-com' />
+			<QuoteDisplay className='quote-display-com'/>
 
-			<SongList className='list' />
+			<SongList className='list-com' />
 
-			<AddSongInput className='footer-form'/>
+			<AddSongInput className='add-song-com'/>
 		</div>
 	);
 }

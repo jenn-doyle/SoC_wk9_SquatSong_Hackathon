@@ -3,8 +3,8 @@ import "./QuoteDisplay.css";
 function QuoteDisplay({ quote, person }) {
   // take in data from fetch
   return (
-    <div>
-      <h1>{quote}</h1>
+    <div className="quote-display">
+      <h2>{quote}</h2>
       <h3>{person}</h3>
     </div>
   );
