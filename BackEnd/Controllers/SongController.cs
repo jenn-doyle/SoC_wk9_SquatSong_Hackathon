@@ -38,7 +38,7 @@ public class SongController : ControllerBase
         try
         {
             Console.WriteLine(ModelState.IsValid);
-            var insertSong = await _songRepository.Insert(song);
+            var insertSong = await _songRepository.Insert(new MoQuotePlusSong {Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy});
             return Ok(insertSong);
 
         }
