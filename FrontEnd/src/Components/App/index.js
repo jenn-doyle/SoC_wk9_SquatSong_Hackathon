@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import SquatInput from '../SquatInput';
+import "./App.css";
+import SquatInput from "../SquatInput";
+import AddSongInput from "../AddSongInput";
 
 function App() {
   return (
     <div className="App">
+      <AddSongInput />
     </div>
   );
 }
