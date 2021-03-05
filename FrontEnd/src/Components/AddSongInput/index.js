@@ -27,6 +27,7 @@ function AddSongInput() {
     <form className="add-song-form" action="submit">
       <input type="text" placeholder="Title" onChange={(e) => UpdateData(e)} />
       <input type="text" placeholder="Artist" onChange={(e) => UpdateData(e)} />
+      <label>in seconds:</label>
       <input
         type="text"
         placeholder="SongLengthCode"
@@ -43,6 +44,7 @@ function AddSongInput() {
         onClick={(event) => {
           event.preventDefault();
           console.log(data);
+          console.alert("thanks for your submission");
         }}
       >
         Add Song
