@@ -29,7 +29,7 @@ public class SongRepository : BaseRepository, IRepository<MoQuotePlusSong>
     // (string Title, string Artist, int SongLengthCode, string Link, string SuggestedBy)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<MoQuotePlusSong>("INSERT INTO Songs (Title, Artist, SongLengthCode, Link, SuggestedBy) VALUES (@Title, @Artist, @SongLengthCode, @Link, @SuggestedBy); SELECT * FROM Songs ORDER BY DESC LIMIT 1", songObject );
+        return await connection.QuerySingleAsync<MoQuotePlusSong>("INSERT INTO Songs (Title, Artist, SongLengthCode, Link, SuggestedBy) VALUES (@Title, @Artist, @SongLengthCode, @Link, @SuggestedBy); SELECT * FROM Songs LIMIT 1", songObject );
     }
 
    
