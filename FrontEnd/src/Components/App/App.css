@@ -1,57 +1,115 @@
-.App{
+.App {
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 1fr;
-  grid-template-areas: 
-    "header header header header" 
+  grid-template-areas:
+    "header header header header"
     ". squatInput list ."
     ". quoteDisplay list . "
     "footerForm footerForm footerForm footerForm";
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
-}
-* {
-  background-color: #e4fbff;
-}
-/*mobile*/
-@media (max-width: 500px){
-   .App {
-     grid-template-areas: 
-    "header header header" 
-    ". squatInput."
-    ". quoteDisplay ."
-    ". list ."
-    "footerForm footerForm footerForm";
-   }
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  background: rgb(74, 144, 226);
+  background: radial-gradient(
+    circle,
+    rgba(74, 144, 226, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
-h1{
+/*mobile*/
+@media (max-width: 500px) {
+  .App {
+    grid-template-areas:
+      "header header header"
+      ". squatInput."
+      ". quoteDisplay ."
+      ". list ."
+      "footerForm footerForm footerForm";
+  }
+}
+
+h1 {
   grid-area: header;
-  font-weight: 600;
+  font-weight: 300;
   font-family: "Architects Daughter";
-  font-size: 50px;
+  font-size: 70px;
+  margin-top: 30px;
 }
-h1 span{
-  color: #7868e6;
-  font-weight: 700;
+
+h1 span {
+  color: #31986a;
+  font-weight: 600;
   font-style: normal;
+  font-size: 70px;
 }
-.squat-input-form{
+
+.squat-input-form {
   grid-area: squatInput;
   font-family: "Architects Daughter";
-}
-.quote-display{
-  
-  grid-area: quoteDisplay;
-  font-family: "Architects Daughter";
-}
-.song-list{
-  grid-area: list;
-  font-family: "Architects Daughter";
-}
-.add-song-form{
-  grid-area: footerForm;
-  font-family: "Architects Daughter";
+  position: relative;
+  font-size: 25px;
+  margin-bottom: 80px;
 }
 
+.quote-display {
+  grid-area: quoteDisplay;
+  font-family: "Architects Daughter";
+  position: relative;
+  font-size: 30px;
+}
+
+.song-list {
+  grid-area: list;
+  font-family: "Architects Daughter";
+  font-size: 20px;
+}
+
+.add-song-form {
+  grid-area: footerForm;
+  font-family: "Architects Daughter";
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "Architects Daughter";
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 95px;
+}
+
+#woman {
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 30%;
+  width: 20%;
+}
+
+#man {
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 30%;
+  width: 20%;
+}
+
+#world {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 30%;
+  width: 15%;
+}
+
+#soc {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  height: 30%;
+  width: 15%;
+}
