@@ -4,7 +4,7 @@ function useFetch(state) {
   const [dataState, setDataState] = useState([]);
 
   async function fetchData() {
-    let result = await fetch("url");
+    let result = await fetch("https:localhost:5001/songs");
     let data = await result.json();
     setDataState(data);
   }
