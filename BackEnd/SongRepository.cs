@@ -10,12 +10,19 @@ public class SongRepository : BaseRepository, IRepository<MoQuotePlusSong>
 
     public SongRepository(IConfiguration configuration) : base(configuration) { }
 
+    public IEnumerable<MoQuotePlusSong> GetAll()
+    {
+        using var connection = CreateConnection();
+        IEnumerable<MoQuotePlusSong> songs = connection.Query<MoQuotePlusSong>("SELECT * FROM Songs;");
+        return songs;
+    }
+
     public async Task<MoQuotePlusSong> Get(int slc)
     {
         using var connection = CreateConnection();
         return await connection.QuerySingleAsync<MoQuotePlusSong>("SELECT * FROM Songs INNER JOIN MoQuotes ON MoQuotes.id = floor(random() * 8+1)::int WHERE songLengthCode = @Slc ORDER BY RANDOM() LIMIT 1;", new { Slc = slc });
         //will return ONE song in a given song code bucket (SLC) and ALSO a random Quote 
-        
+
     }
 
     //convert squats into time 
@@ -29,17 +36,12 @@ public class SongRepository : BaseRepository, IRepository<MoQuotePlusSong>
     // (string Title, string Artist, int SongLengthCode, string Link, string SuggestedBy)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<MoQuotePlusSong>("INSERT INTO Songs (Title, Artist, SongLengthCode, Link, SuggestedBy) VALUES (@Title, @Artist, @SongLengthCode, @Link, @SuggestedBy); SELECT * FROM Songs LIMIT 1", songObject );
+        return await connection.QuerySingleAsync<MoQuotePlusSong>("INSERT INTO Songs (Title, Artist, SongLengthCode, Link, SuggestedBy) VALUES (@Title, @Artist, @SongLengthCode, @Link, @SuggestedBy); SELECT * FROM Songs LIMIT 1;", songObject);
     }
 
-   
-
-
-    // public async Task<Book> Update(Book book)
-    // {
-    //     using var connection = CreateConnection();
-    //     return await connection.QuerySingleAsync<Book>("UPDATE Books SET Title = @Title, Author = @Author WHERE Id = @Id RETURNING *", book);
-    // }
-
+    public async Task<MoQuotePlusSong> Update(MoQuotePlusSong song)
+    {
+        using var connection = CreateConnection();
+        return await connection.QuerySingleAsync<MoQuotePlusSong>("UPDATE Songs SET Title = @Title, Artist = @Artist, SongLengthCode = @SongLengthCode, Link = @Link, SuggestedBy = @SuggestedBy WHERE Id = @Id;", song);
+    }
 }
-

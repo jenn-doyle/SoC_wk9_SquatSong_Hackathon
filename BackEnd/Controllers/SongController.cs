@@ -16,6 +16,13 @@ public class SongController : ControllerBase
         _songRepository = songRepository;
     }
 
+    [HttpGet]
+    public IEnumerable<MoQuotePlusSong> GetAll()
+    {
+        return _songRepository.GetAll();
+    }
+
+
     [HttpGet("{slc}")]
     public async Task<IActionResult> Get(int slc)
     {
@@ -38,7 +45,7 @@ public class SongController : ControllerBase
         try
         {
             Console.WriteLine(ModelState.IsValid);
-            var insertSong = await _songRepository.Insert(new MoQuotePlusSong {Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy});
+            var insertSong = await _songRepository.Insert(new MoQuotePlusSong { Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
             return Ok(insertSong);
 
         }
@@ -52,20 +59,20 @@ public class SongController : ControllerBase
     }
 
     //POTENTIAL STRETCH GOAL
-    //[HttpPut("{id}")]
-    // public async Task<IActionResult> Update(long id, [FromBody] Book book)
-    // {
-    //     try
-    //     {
-    //         var editBook = await _bookRepository.Update(new Book { Id = id, Title = book.Title, Author = book.Author });
-    //         return Ok(editBook);
-    //     }
-    //     catch (Exception error)
-    //     {
-    //         Console.WriteLine(error.Message);
-    //         Console.WriteLine(error.StackTrace);
-    //         //handle exception
-    //         return NotFound("no book updated");
-    //     }
-    // }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(long id, [FromBody] MoQuotePlusSong song)
+    {
+        try
+        {
+            var editSong = await _songRepository.Update(new MoQuotePlusSong { Id = id, Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
+            return Ok(editSong);
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine(error.Message);
+            Console.WriteLine(error.StackTrace);
+            //handle exception
+            return NotFound("no song updated");
+        }
+    }
 }
