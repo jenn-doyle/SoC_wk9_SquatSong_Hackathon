@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 public class SongControllerTests
 {
-    private readonly Mock<IRepository<MoQuotePlusSong>> _mockRepo;
+    private readonly Mock<IRepository<Song>> _mockRepo;
     private readonly SongController _controller;
 
     public SongControllerTests()
     {
-        _mockRepo = new Mock<IRepository<MoQuotePlusSong>>();
+        _mockRepo = new Mock<IRepository<Song>>();
         _controller = new SongController(_mockRepo.Object);
     }
 
