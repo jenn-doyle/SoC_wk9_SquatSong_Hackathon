@@ -4,8 +4,9 @@ function QuoteDisplay({ data}) {
   // take in data from fetch
   return (
     <div className="quote-display">
+      <h2 className ="quote-title">Motivational Quote</h2>
       <h2>{data.quote}</h2>
-      <h3>{data.artist}</h3>
+      
     </div>
   );
 }
