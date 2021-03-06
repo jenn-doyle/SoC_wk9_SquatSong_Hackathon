@@ -7,8 +7,6 @@ function useFetch(songLengthState) {
   const BACKEND_URL = "https:localhost:5001/songs";
   const BACKEND_URL_Quotes = "https:localhost:5001/quotes";
 
-  console.log(`scl recieved in fetch ${songLengthState}`);
-
   let songLengthStateNew = songLengthState / 30;
 
   if (songLengthStateNew <= 1) {
@@ -36,6 +34,7 @@ function useFetch(songLengthState) {
   }, [songLengthState]);
 
   let DATA = { songData: dataState, quoteData: quoteDataState };
+  console.log(DATA);
   return DATA;
 }
 

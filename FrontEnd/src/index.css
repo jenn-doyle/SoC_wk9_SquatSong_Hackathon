@@ -1,29 +1,53 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Squada+One&display=swap');
+
+/*variables */
+:root {
+  --accent: #34a4dd;
+  --fw-bold: 600;
+  --fw-light: 400;
+  --fw-normal: 500;
+  --heading-ff:'Squada One', cursive;
+  --container-bg: #313030c4;
+  --main-ff: 'Roboto', sans-serif;
+  --main-txt: white;
+  --offwhite: #D8E1E9;
+}
+
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
+}
+
+body {
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: var(--container-bg);
+  background-image: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2168&q=80");
+  color: var(--main-txt);
+  font-family: var(--main-ff);
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 button,
-input {
+input,
+a {
+  color: inherit;
+  display: inline-block;
   font-family: inherit;
   font-size: inherit;
-  color: inherit;
+  transition: .25s all;
 }
 
 button {
-  background-color: #31986A;
-  color: white;
+  background-color: var(--accent);
   border-radius: 60px;
-  padding: 10px 40px;
   border: none;
-  outline: none;
   box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.75);
-  transition: 0.25s all;
-  margin: 10px;
+  color: white;
+  outline: none;
+  padding: .5em 1em;
 }
 button:hover,
 button:focus {
@@ -31,3 +55,24 @@ button:focus {
   cursor: pointer;
 }
 
+input {
+  border: 1px solid var(--offwhite);
+  border-bottom: 2px solid var(--offwhite);
+  border-radius: 5px;
+  padding-left: .5em;
+}
+input:focus{
+  border-bottom: 2px solid var(--accent);
+  font-style: italic;
+  outline: none;
+}
+
+a {
+  color: var(--offwhite);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+}
