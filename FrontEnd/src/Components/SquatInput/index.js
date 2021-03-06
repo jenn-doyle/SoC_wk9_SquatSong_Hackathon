@@ -21,8 +21,8 @@ function SquatInput({ onClick }) {
         onClick={(e) => {
           e.preventDefault();
           onClick(input);
-                  }}
-        >
+        }}
+      >
         Get Songs
       </button>
     </form>
@@ -42,7 +42,7 @@ export default SquatInput;
 //   console.log(squatResult)
 
 // }
-// else 
+// else
 // {
 //   squatResult = Math.floor(squatResult);
 //   console.log(squatResult)
