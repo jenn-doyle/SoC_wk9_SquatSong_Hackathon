@@ -9,15 +9,15 @@ using System.Numerics;
 [Route("songs")]
 public class SongController : ControllerBase
 {
-    private readonly IRepository<MoQuotePlusSong> _songRepository;
+    private readonly IRepository<Song> _songRepository;
 
-    public SongController(IRepository<MoQuotePlusSong> songRepository)
+    public SongController(IRepository<Song> songRepository)
     {
         _songRepository = songRepository;
     }
 
     [HttpGet]
-    public IEnumerable<MoQuotePlusSong> GetAll()
+    public IEnumerable<Song> GetAll()
     {
         return _songRepository.GetAll();
     }
@@ -40,12 +40,12 @@ public class SongController : ControllerBase
 
 
     [HttpPost]
-    public async Task<IActionResult> Insert([FromBody] MoQuotePlusSong song)
+    public async Task<IActionResult> Insert([FromBody] Song song)
     {
         try
         {
             Console.WriteLine(ModelState.IsValid);
-            var insertSong = await _songRepository.Insert(new MoQuotePlusSong { Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
+            var insertSong = await _songRepository.Insert(new Song { Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
             return Ok(insertSong);
 
         }
@@ -60,11 +60,11 @@ public class SongController : ControllerBase
 
     //POTENTIAL STRETCH GOAL
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(long id, [FromBody] MoQuotePlusSong song)
+    public async Task<IActionResult> Update(long id, [FromBody] Song song)
     {
         try
         {
-            var editSong = await _songRepository.Update(new MoQuotePlusSong { Id = id, Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
+            var editSong = await _songRepository.Update(new Song { Id = id, Title = song.Title, Artist = song.Artist, SongLengthCode = song.SongLengthCode, Link = song.Link, SuggestedBy = song.SuggestedBy });
             return Ok(editSong);
         }
         catch (Exception error)

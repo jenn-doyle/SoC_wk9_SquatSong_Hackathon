@@ -5,9 +5,9 @@ using System.Numerics;
 
 public interface IRepository<T>
 {
-    IEnumerable<MoQuotePlusSong> GetAll();
+    IEnumerable<T> GetAll();
     Task<T> Get(int slc);
-    Task<T> Update(MoQuotePlusSong song);
-    Task<T> Insert(MoQuotePlusSong songObject);
+    Task<T> Update(T t);
+    Task<T> Insert(T t);
 
 }
