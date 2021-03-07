@@ -54,9 +54,9 @@ namespace BackEnd
             //this fixed Nathan's fetch errors.
             app.UseRouting();
             app.UseCors(builder => builder
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader());
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 
 
             //app.UseAuthorization();
