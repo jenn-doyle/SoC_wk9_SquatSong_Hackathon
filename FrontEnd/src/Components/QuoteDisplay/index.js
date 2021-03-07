@@ -5,7 +5,7 @@ function QuoteDisplay({ data }) {
   return (
     <div className="quote-display">
       <h2 className="quote-title">Motivational Quote:</h2>
-      <h3>"{data.quote}"</h3>
+      <p className="quote">"{data.quote}"</p>
     </div>
   );
 }

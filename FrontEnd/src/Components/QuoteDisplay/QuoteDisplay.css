@@ -1,0 +1,11 @@
+.quote-title {
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: var(--fw-light);
+    padding: 0 1rem;
+}

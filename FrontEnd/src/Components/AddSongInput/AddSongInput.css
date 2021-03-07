@@ -1,1 +1,34 @@
-
+.add-song-form {
+	align-items: center;
+	display: grid;
+    flex-grow: 1;
+	grid-gap: .25em;
+	grid-template-areas: 
+        "title . artist" 
+        "link link link" 
+        "SLC . suggestedBy"
+        "btn btn btn";
+    grid-template-columns: 1fr 0px 1fr;
+    max-width: 850px;
+    margin: 0;
+}
+#Title {
+	grid-area: title;
+}
+#Artist {
+	grid-area: artist;
+}
+#Link {
+	grid-area: link;
+}
+#SuggestedBy {
+	grid-area: suggestedBy;
+}
+#SongLengthCode {
+	grid-area: SLC;
+}
+.add-song-btn {
+	grid-area: btn;
+	justify-self: center;
+	margin: .25rem;
+}

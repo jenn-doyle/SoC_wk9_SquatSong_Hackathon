@@ -9,7 +9,7 @@ function SquatInput({ onClick }) {
 	return (
 		<form className='squat-input-form'>
 			<p className='squat-text'>
-				Enter How Many Squats You Gotta Do...{' '}
+				Enter How Many Squats You Gotta Do:
 			</p>
 			<input
 				className='squat-input-number'
