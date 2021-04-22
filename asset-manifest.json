@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/SoC-hackathon-week-9/static/css/main.70f66c4f.chunk.css",
+    "main.js": "/SoC-hackathon-week-9/static/js/main.017a7e17.chunk.js",
+    "main.js.map": "/SoC-hackathon-week-9/static/js/main.017a7e17.chunk.js.map",
+    "runtime-main.js": "/SoC-hackathon-week-9/static/js/runtime-main.db7747e7.js",
+    "runtime-main.js.map": "/SoC-hackathon-week-9/static/js/runtime-main.db7747e7.js.map",
+    "static/js/2.8a87948b.chunk.js": "/SoC-hackathon-week-9/static/js/2.8a87948b.chunk.js",
+    "static/js/2.8a87948b.chunk.js.map": "/SoC-hackathon-week-9/static/js/2.8a87948b.chunk.js.map",
+    "static/js/3.5c22710a.chunk.js": "/SoC-hackathon-week-9/static/js/3.5c22710a.chunk.js",
+    "static/js/3.5c22710a.chunk.js.map": "/SoC-hackathon-week-9/static/js/3.5c22710a.chunk.js.map",
+    "index.html": "/SoC-hackathon-week-9/index.html",
+    "static/css/main.70f66c4f.chunk.css.map": "/SoC-hackathon-week-9/static/css/main.70f66c4f.chunk.css.map",
+    "static/js/2.8a87948b.chunk.js.LICENSE.txt": "/SoC-hackathon-week-9/static/js/2.8a87948b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db7747e7.js",
+    "static/js/2.8a87948b.chunk.js",
+    "static/css/main.70f66c4f.chunk.css",
+    "static/js/main.017a7e17.chunk.js"
+  ]
+}
