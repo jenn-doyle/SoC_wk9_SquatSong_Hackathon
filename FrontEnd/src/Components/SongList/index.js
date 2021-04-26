@@ -8,9 +8,9 @@ function SongList({ data }) {
 				<span>by </span>
 				{data.artist}
 			</h4>
-			<p className="link-p">
+			{/* <p className="link-p">
 				Link: <a href='{data.link}'>{data.link}</a>
-			</p>
+			</p> */}
 
 			<p className='suggested-by'>
 				Suggested by <span>{data.suggestedBy}</span>
