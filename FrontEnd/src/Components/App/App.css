@@ -1,99 +1,101 @@
 .App {
-	align-content: flex-start;
-	display: grid;
-	grid-gap: 1em;
-	grid-template-columns: auto repeat(2, 2fr) auto;
-	grid-template-rows: auto 1fr 2fr auto;
-	grid-template-areas: "header header header header"
-		". squatInput squatInput ." ". quoteDisplay list . "
-		"footer footer footer footer";
-	min-height: 100vh;
+  align-content: flex-start;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: auto repeat(2, 2fr) auto;
+  grid-template-rows: auto 1fr 2fr auto;
+  grid-template-areas:
+    "header header header header"
+    ". squatInput squatInput ." ". quoteDisplay list . "
+    "footer footer footer footer";
+  min-height: 100vh;
 }
 
 header,
 footer {
-	align-items: center;
-	display: flex;
-	justify-content: space-evenly;
-	text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 header {
-	background: var(--black);
-	grid-area: header;
-	font-family: var(--heading-ff);
-	margin-top: 0px;
-	padding-bottom: 1em;
+  background: var(--black);
+  grid-area: header;
+  font-family: var(--heading-ff);
+  margin-top: 0px;
+  padding-bottom: 1em;
 }
 
 h1 span {
-	color: var(--accent);
-	display: block;
-	font-size: 4.75rem;
-	font-weight: var(--fw-bold);
+  color: var(--accent);
+  display: block;
+  font-size: 4.75rem;
+  font-weight: var(--fw-bold);
 }
 
 h1 {
-	border-bottom: 2px solid var(--accent);
-	font-size: 4.5rem;
+  border-bottom: 2px solid var(--accent);
+  font-size: 4.5rem;
 }
 
 .squat-input-form {
-	align-self: flex-end;
-	grid-area: squatInput;
-	justify-self: center;
+  align-self: flex-end;
+  grid-area: squatInput;
+  justify-self: center;
 }
 .quote-display,
 .song-list {
-	align-self: center;
-	justify-self: center;
+  align-self: center;
+  justify-self: center;
 }
 .quote-display {
-	grid-area: quoteDisplay;
+  grid-area: quoteDisplay;
+  width: 350px;
 }
 .song-list {
-	grid-area: list;
+  grid-area: list;
 }
 .song-video {
-	align-self: flex-end;
-	grid-area: squatInput;
-	margin-left: 1650px;
-	margin-bottom: -150px;
+  grid-area: list;
+  margin-top: 20px;
+  margin-left: -210px;
 }
 
 footer {
-	align-self: flex-end;
-	background: var(--white);
-	grid-area: footer;
-	padding: .5em;
+  align-self: flex-end;
+  background: var(--white);
+  grid-area: footer;
+  padding: 0.5em;
 }
 
 img {
-	border-radius: 50%;
-	max-width: 10%;
-	height: auto;
-	flex-grow: 0;
+  border-radius: 50%;
+  max-width: 10%;
+  height: auto;
+  flex-grow: 0;
 }
 
 .squat-input-form,
 .quote-display,
 .song-list {
-	background: var(--container-bg);
-	border: 1px solid var(--white);
-	border-radius: 10px;
-	padding: 1rem;
-	text-align: center;
+  background: var(--container-bg);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
 }
 
 /*mobile (is broken at present)*/
 @media (max-width: 500px) {
-	.App {
-		grid-template-areas: "header header header" ". squatInput."
-			". quoteDisplay ." ". list ." "footer footer footer";
-		grid-template-columns: auto 1fr auto;
-		grid-template-rows: auto repeat(3, 1fr) auto;
+  .App {
+    grid-template-areas:
+      "header header header" ". squatInput."
+      ". quoteDisplay ." ". list ." "footer footer footer";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto repeat(3, 1fr) auto;
     width: 100%;
-	}
+  }
   img {
     display: none;
   }

@@ -9,7 +9,7 @@ function usePost(newSong) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newSong),
     };
-    fetch("http://localhost:5000/songs", requestOptions);
+    fetch("https://supersquatsongapp.herokuapp.com/songs", requestOptions);
   }
 
   useEffect(() => {

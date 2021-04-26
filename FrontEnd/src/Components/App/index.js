@@ -36,7 +36,7 @@ function App() {
       <QuoteDisplay data={appData.quoteData} />
       <SongList className="list-com" data={appData.songData} />
 
-	  <ReactPlayer className="song-video" url={appData.songData.link} />
+	  <ReactPlayer className="song-video" url={appData.songData.link} width="400px" height="300px" />
 
       <footer>
         <img

@@ -4,8 +4,8 @@ function useFetch(songLengthState) {
   const [dataState, setDataState] = useState(1);
   const [quoteDataState, setQuoteDataState] = useState({});
 
-  const BACKEND_URL = "http://localhost:5000/songs";
-  const BACKEND_URL_Quotes = "http://localhost:5000/quotes";
+  const BACKEND_URL = "https://supersquatsongapp.herokuapp.com/songs";
+  const BACKEND_URL_Quotes = "https://supersquatsongapp.herokuapp.com/quotes";
 
   let songLengthStateNew = songLengthState / 30;
 
