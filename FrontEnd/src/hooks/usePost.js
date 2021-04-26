@@ -9,7 +9,7 @@ function usePost(newSong) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newSong),
     };
-    fetch("https://localhost:5001/songs", requestOptions);
+    fetch("http://localhost:5000/songs", requestOptions);
   }
 
   useEffect(() => {
