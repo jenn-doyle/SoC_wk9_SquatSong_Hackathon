@@ -23,9 +23,6 @@ function AddSongInput() {
 	// post songs from here using usePost custom hooks.
 	usePost(postData);
 
-	// let selectStyle = {
-	//   height: '26px',};
-
 	return (
 		<form id='form' className='add-song-form' action='submit'>
 			<input

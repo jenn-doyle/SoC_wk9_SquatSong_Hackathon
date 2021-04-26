@@ -32,7 +32,7 @@ function App() {
         />
       </header>
 
-      <SquatInput onClick={setDataState} />
+      <SquatInput onClick={setDataState} data-testid="squat-input" />
       <QuoteDisplay data={appData.quoteData} />
       <SongList className="list-com" data={appData.songData} />
 
